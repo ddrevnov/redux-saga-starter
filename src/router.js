@@ -4,7 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Main from './pages/Main/Main';
+import Main from './pages/Main';
 
 export default () => (
   <Router>
