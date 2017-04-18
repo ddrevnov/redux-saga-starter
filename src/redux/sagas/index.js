@@ -1,5 +1,5 @@
-// import chat from './chat';
+import users from './users';
 
 export default [
-  // ...chat,
+  ...users,
 ];

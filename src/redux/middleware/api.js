@@ -17,8 +17,6 @@ export default ({ dispatch, getState }) => next => (action) => {
   };
   next({ ...rest, type: REQUEST });
 
- // const token = getState().currentUser.jwtToken;
-
   return promise.then(
     result => nextIfHaveAction({
       ...rest,
@@ -26,10 +24,6 @@ export default ({ dispatch, getState }) => next => (action) => {
       type: SUCCESS,
     }),
     (error) => {
-      // if (error.status === 401) {
-      //   dispatch(logout());
-      // }
-
       nextIfHaveAction({ ...rest, error, type: FAILURE });
       throw error;
     },
