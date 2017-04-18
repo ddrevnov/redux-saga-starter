@@ -1,5 +1,5 @@
 {
-  "name": "live-support",
+  "name": "redux-saga-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +8,9 @@
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-redux": "^5.0.3",
-    "react-router": "^4.0.0",
     "react-router-dom": "^4.1.1",
-    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.6",
-    "socket.io-client": "^1.7.3"
+    "redux-saga": "^0.14.6"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
