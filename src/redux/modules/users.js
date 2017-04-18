@@ -1,6 +1,6 @@
 // import { getUsers } from '../../api/users';
 
-const LOAD_USERS = 'users/LOAD_USERS';
+export const LOAD_USERS = 'users/LOAD_USERS';
 export const LOAD_USERS_SUCCESS = 'users/LOAD_USERS_SUCCESS';
 export const LOAD_USERS_FAIL = 'users/LOAD_USERS_FAIL';
 

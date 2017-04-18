@@ -1,4 +1,4 @@
-import { put, call } from 'redux-saga/effects';
+import { put, call, take } from 'redux-saga/effects';
 
 import {
   getUsers
@@ -7,14 +7,19 @@ import {
 import {
   LOAD_USERS_SUCCESS,
   LOAD_USERS_FAIL,
+  LOAD_USERS,
 } from '../modules/users';
 
 function* onLoadUsers() {
-  try {
-    const users = yield call(getUsers);
-    yield put({ type: LOAD_USERS_SUCCESS, result: users.data });
-  } catch (error) {
-    yield put({ type: LOAD_USERS_FAIL, error });
+  while (true) {
+    yield take(LOAD_USERS);
+
+    try {
+      const users = yield call(getUsers);
+      yield put({ type: LOAD_USERS_SUCCESS, result: users.data });
+    } catch (error) {
+      yield put({ type: LOAD_USERS_FAIL, error });
+    }
   }
 }
 
